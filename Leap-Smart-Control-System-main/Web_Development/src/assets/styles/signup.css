@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  /* text-transform: capitalize; */
+  transition: all 0.2s linear;
+}
+
+/* Color variables for all pages */
+:root {
+  --blue: #0366ff;
+  --black: #06090a;
+  --gray: #353535;
+  --light-gray: #d0d0d0;
+  --border: #b0b0b0;
+  --box-shadow: 0 0.5rem 1.5rem #8080808c;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--light-gray);
+  min-height: 100vh;
+  height: 100%;
+  position: relative;
+}
+
+header a {
+  position: absolute;
+  background-color: var(--gray);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  top: 30px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header a i {
+  color: #fff;
+}
+
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.signup-container h1 {
+  text-align: center;
+  width: 100%;
+  height: 29px;
+  margin-top: 45px;
+  color: #fff;
+}
+
+.signup-container .signup-rectangle {
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 4px 3px #8080808c;
+  width: 100%;
+  max-width: 398px;
+  height: auto;
+  border: 3px solid #b0b0b0;
+  margin-top: 25px;
+}
+
+.signup-container .signup-rectangle h2 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.signup-container .signup-rectangle p {
+  color: #b0b0b0;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-top: 4px;
+  font-family: serif;
+}
+
+.signup-container .signup-rectangle .filds {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.signup-container .signup-rectangle .filds input {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--light-gray);
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+.signup-container .signup-rectangle .filds input:hover {
+  background-color: var(--border);
+}
+
+.signup-container .signup-rectangle .filds input::placeholder {
+  padding-left: 10px;
+  color: var(--gray);
+  font-weight: 400;
+  font-size: 16px;
+  width: 100%;
+  height: 19px;
+}
+
+.signup-container .signup-rectangle .filds .add-phone {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.signup-container .signup-rectangle .filds .add-phone #phone {
+  width: 100%;
+}
+
+.signup-container .signup-rectangle .filds .add-phone .add-phone-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.signup-container .signup-rectangle h3 {
+  font-size: 16px;
+  height: 19px;
+  color: #f2f2f7;
+}
+
+.signup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3px;
+  gap: 10px;
+}
+
+.signup-buttons .signup-button img {
+  width: 50px;
+  height: 50px;
+}
+
+.signup-buttons .signup-button {
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.signup-container .signup-rectangle .submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-container .signup-rectangle .submit button {
+  width: 100%;
+  max-width: 312px;
+  height: 62px;
+  margin-top: 21.5px;
+  margin-bottom: 21.5px;
+  border: solid 1px #ee8924;
+  color: #ee8924;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signup-container .signup-rectangle .submit button:hover {
+  background-color: #ee8924;
+  color: #000;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-link p {
+  color: var(--light-gray);
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #ee8924;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .signup-container .signup-rectangle {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .signup-container .signup-rectangle .filds .add-phone #phone {
+    width: 90%;
+  }
+
+  .signup-container .signup-rectangle .filds .add-phone .add-phone-number {
+    width: 10%;
+    margin-top: 10px;
+  }
+
+  .signup-buttons {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .signup-buttons .signup-button img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-container h1 {
+    font-size: 24px;
+  }
+
+  .signup-container .signup-rectangle h2 {
+    font-size: 20px;
+  }
+
+  .signup-container .signup-rectangle .submit button {
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+/* Email Verification Styles */
+.verification-status {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.verification-status i {
+  font-size: 48px;
+  color: var(--blue);
+  margin-bottom: 15px;
+}
+
+.verification-status p {
+  color: var(--gray);
+  font-size: 16px;
+}
+
+.resend-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.resend-section p {
+  color: var(--gray);
+  margin-bottom: 10px;
+}
+
+.resend-button {
+  background: none;
+  border: none;
+  color: #ee8924;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+.resend-button:hover {
+  color: #ee8924;
+}
+
+/* Phone Verification Styles */
+.input-group {
+  margin: 20px 0;
+}
+
+.input-group label {
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.input-group input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--light-gray);
+  padding: 0 15px;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: var(--black);
+  font-weight: 600;
+}
+
+.input-group input:focus {
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(3, 102, 255, 0.3);
+}
+
+.input-group input::placeholder {
+  color: var(--gray);
+  font-weight: 400;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.skip-button {
+  width: 100%;
+  max-width: 312px;
+  height: 50px;
+  margin-top: 10px;
+  border: solid 1px var(--gray);
+  color: var(--gray);
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.skip-button:hover {
+  background-color: var(--gray);
+  color: #fff;
+}
+
+#phone-display {
+  font-weight: 600;
+  color: var(--blue) !important;
+  font-size: 16px !important;
+}
+
+/* Remove OTP styles */
+.otp-inputs,
+.otp-input {
+  display: none;
+}
+
+/* Custom Notification Popup */
+.notification-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 1000;
+  transform: translateX(120%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.notification-popup.show {
+  transform: translateX(0);
+}
+
+.notification-popup i {
+  font-size: 20px;
+}
+
+.notification-popup .message {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.notification-popup .close-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.notification-popup .close-btn:hover {
+  opacity: 1;
+}

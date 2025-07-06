@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: all 0.2s linear;
+}
+
+body {
+  padding-top: 10px;
+  background-color: #000;
+  min-height: 100vh;
+  width: 100%;
+  color: #fff;
+  padding: 0px;
+}
+
+header {
+  margin: 20px 20px 0 0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header .date-menue {
+  display: flex;
+  align-items: center;
+}
+
+header .date-menue img {
+  cursor: pointer;
+  width: 29px;
+  display: none; /* Hide by default on desktop */
+}
+
+header .date-menue p {
+  margin-left: 18px;
+  color: #fff;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+header .nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 302px;
+}
+
+header .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 14px;
+  position: relative;
+}
+
+header .nav-links #home::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+header .nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+header .nav-links a:hover::after {
+  width: 100%;
+}
+
+header .sign {
+  margin-left: 50px;
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+}
+
+header .sign button {
+  background-color: #2c2c2c;
+  color: #f5f5f5;
+  min-width: 90px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+header .sign button:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+.display-nav-links {
+  display: none;
+  width: 160px;
+  background-color: #2c2c2c;
+  position: fixed;
+  top: 60px;
+  left: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.display-nav-links nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.display-nav-links nav a {
+  color: #f5f5f5;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.display-nav-links nav a:hover {
+  color: #fff;
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+.page-content {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.page-content h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 30px;
+  max-width: 800px;
+}
+
+.page-content p {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #f5f5f5;
+  margin-bottom: 40px;
+}
+
+.Testimonials {
+  padding: 100px 30px;
+  background-color: #111;
+  margin-top: 100px;
+}
+
+.Testimonials h1 {
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+.Testimonials .test {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Testimonials .test .container1,
+.Testimonials .test .container2,
+.Testimonials .test .container3 {
+  flex: 1;
+  min-width: 280px;
+  background-color: #2c2c2c;
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.Testimonials .test .container1:hover,
+.Testimonials .test .container2:hover,
+.Testimonials .test .container3:hover {
+  transform: translateY(-5px);
+}
+
+.Testimonials .test img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #444;
+}
+
+.Testimonials .test p {
+  font-size: 16px;
+  color: #f5f5f5;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Testimonials .test .name-jop {
+  text-align: center;
+}
+
+.Testimonials .test .name-jop h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.Testimonials .test .name-jop span {
+  color: #888;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .display-nav-links {
+    display: none;
+  }
+  
+  header .nav-links {
+    display: none;
+  }
+  
+  header .date-menue img {
+    display: block; /* Show on mobile */
+  }
+  
+  .page-content h1 {
+    font-size: 36px;
+  }
+  
+  .page-content p {
+    font-size: 16px;
+  }
+  
+  .Testimonials .test {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  header {
+    padding: 0 5px;
+    margin: 0;
+  }
+  
+  header .sign {
+    width: fit-content;
+    margin-left: 0px;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .page-content {
+    margin-top: 100px;
+  }
+  
+  .page-content h1 {
+    font-size: 28px;
+  }
+  
+  .page-content p {
+    font-size: 14px;
+  }
+  
+  .Testimonials {
+    padding: 60px 20px;
+  }
+  
+  .Testimonials h1 {
+    font-size: 28px;
+  }
+}
